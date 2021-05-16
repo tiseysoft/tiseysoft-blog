@@ -8,5 +8,5 @@ if(!$conn){
 }
 //coming soon... 
 define ('ROOT_PATH', realpath(dirname(__FILE__)));
-define ('BASE_URL', 'http://http://localhost/tiseysoft-blog/');
+define ('BASE_URL', 'localhost/tiseysoft-blog/tiseysoft-blog');
 ?>

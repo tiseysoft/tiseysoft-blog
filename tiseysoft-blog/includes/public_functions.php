@@ -1,4 +1,6 @@
 <?php 
+
+
 /* * * * * * * * * * * * * * * *
 * Returns all posts under a topic
 * * * * * * * * * * * * * * * * */
@@ -57,12 +59,5 @@ function getPost($slug){
 	}
 	return $post;
 }
-function getAllTopics()
-{
-	global $conn;
-	$sql = "SELECT * FROM topics";
-	$result = mysqli_query($conn, $sql);
-	$topics = mysqli_fetch_all($result, MYSQLI_ASSOC);
-	return $topics;
-}
+
 ?>
