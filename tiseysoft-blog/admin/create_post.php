@@ -8,7 +8,14 @@
 <body>
 	<!-- admin navbar -->
 	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
-	<?php $topics = getAllTopics()	?>
+    <?php 	function getalltopics(){
+	global $conn;
+	$sql = "SELECT * FROM topics";
+	$result = mysqli_query($conn, $sql);
+	$topics = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	return $topics;
+} ?>
+	<?php $topics = getalltopics()	?>
 	<div class="container content">
 		<!-- Left side menu -->
 		<?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
